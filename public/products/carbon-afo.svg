@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <rect width="400" height="400" rx="32" fill="#EEF3F8"/>
+  <circle cx="200" cy="200" r="110" fill="#0F2942" opacity="0.08"/>
+  <path d="M140 260c20-80 40-140 60-160 20 20 40 80 60 160" stroke="#0F2942" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <circle cx="200" cy="100" r="28" fill="#00A896" opacity="0.85"/>
+  <rect x="160" y="250" width="80" height="14" rx="7" fill="#00A896" opacity="0.45"/>
+  <text x="200" y="340" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#0F2942" opacity="0.55">PROTED</text>
+</svg>

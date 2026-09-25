@@ -1,0 +1,212 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  --color-medical: var(--medical);
+  --color-medical-foreground: var(--medical-foreground);
+  --color-teal: var(--teal);
+  --color-teal-foreground: var(--teal-foreground);
+  --color-clinical: var(--clinical);
+  --color-surface: var(--surface);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  /* Clinical palette — ethnocare-grade medical luxury */
+  --medical: #0a192f;
+  --medical-foreground: #f8fafc;
+  --teal: #00b4d8;
+  --teal-foreground: #042f2e;
+  --clinical: #f8fafc;
+  --surface: #eef2f7;
+  --background: #f8fafc;
+  --foreground: #0a192f;
+  --card: #ffffff;
+  --card-foreground: #0a192f;
+  --popover: #ffffff;
+  --popover-foreground: #0a192f;
+  --primary: #0a192f;
+  --primary-foreground: #f8fafc;
+  --secondary: #e8eef5;
+  --secondary-foreground: #0a192f;
+  --muted: #eef2f7;
+  --muted-foreground: #64748b;
+  --accent: #00b4d8;
+  --accent-foreground: #042f2e;
+  --destructive: #dc4a3d;
+  --border: #d4dde8;
+  --input: #d4dde8;
+  --ring: #00b4d8;
+  --chart-1: #0a192f;
+  --chart-2: #00b4d8;
+  --chart-3: #3d7ea6;
+  --chart-4: #7ba3bc;
+  --chart-5: #c5d4e0;
+  --radius: 0.875rem;
+  --sidebar: #0a192f;
+  --sidebar-foreground: #f8fafc;
+  --sidebar-primary: #00b4d8;
+  --sidebar-primary-foreground: #042f2e;
+  --sidebar-accent: #112240;
+  --sidebar-accent-foreground: #f8fafc;
+  --sidebar-border: #112240;
+  --sidebar-ring: #00b4d8;
+}
+
+.dark {
+  color-scheme: dark;
+  --medical: #e8eef5;
+  --medical-foreground: #0a192f;
+  --teal: #48cae4;
+  --teal-foreground: #042f2e;
+  --clinical: #0a192f;
+  --surface: #112240;
+  --background: #0a192f;
+  --foreground: #e8eef5;
+  --card: #112240;
+  --card-foreground: #e8eef5;
+  --popover: #112240;
+  --popover-foreground: #e8eef5;
+  --primary: #e8eef5;
+  --primary-foreground: #0a192f;
+  --secondary: #1a3655;
+  --secondary-foreground: #e8eef5;
+  --muted: #1a3655;
+  --muted-foreground: #94a3b8;
+  --accent: #48cae4;
+  --accent-foreground: #042f2e;
+  --destructive: #f87171;
+  --border: #1e3a5f;
+  --input: #1e3a5f;
+  --ring: #48cae4;
+  --chart-1: #48cae4;
+  --chart-2: #7ba3bc;
+  --chart-3: #e8eef5;
+  --chart-4: #3d7ea6;
+  --chart-5: #1a3655;
+  --sidebar: #020c1b;
+  --sidebar-foreground: #e8eef5;
+  --sidebar-primary: #48cae4;
+  --sidebar-primary-foreground: #042f2e;
+  --sidebar-accent: #112240;
+  --sidebar-accent-foreground: #e8eef5;
+  --sidebar-border: #1a3655;
+  --sidebar-ring: #48cae4;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+    letter-spacing: -0.011em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.035em;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--teal) 35%, transparent);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/80 backdrop-blur-md dark:bg-slate-900/80;
+  }
+
+  .glass-strong {
+    @apply bg-white/90 shadow-[0_1px_0_0_rgba(10,25,47,0.06)] backdrop-blur-xl dark:bg-slate-900/90;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mesh-bg {
+    background-image:
+      radial-gradient(ellipse 80% 60% at 15% 0%, color-mix(in oklab, #00b4d8 16%, transparent), transparent),
+      radial-gradient(ellipse 55% 45% at 95% 15%, color-mix(in oklab, #0a192f 10%, transparent), transparent),
+      radial-gradient(ellipse 40% 35% at 50% 100%, color-mix(in oklab, #00b4d8 8%, transparent), transparent),
+      linear-gradient(180deg, #f8fafc 0%, #eef2f7 100%);
+  }
+
+  .dark .mesh-bg {
+    background-image:
+      radial-gradient(ellipse 80% 60% at 15% 0%, color-mix(in oklab, #48cae4 10%, transparent), transparent),
+      radial-gradient(ellipse 55% 45% at 95% 15%, color-mix(in oklab, #3d7ea6 12%, transparent), transparent),
+      linear-gradient(180deg, #0a192f 0%, #112240 100%);
+  }
+
+  .grid-fade {
+    background-image:
+      linear-gradient(to right, color-mix(in oklab, var(--foreground) 3.5%, transparent) 1px, transparent 1px),
+      linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 3.5%, transparent) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+  }
+
+  .section-pad {
+    @apply px-5 py-24 lg:px-10 lg:py-32;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-bold uppercase tracking-[0.28em] text-teal;
+  }
+}

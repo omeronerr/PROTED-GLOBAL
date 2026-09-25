@@ -1,0 +1,37 @@
+﻿[
+    {
+        "file":  "/slider/slide-1.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/1532500831.png",
+        "index":  1
+    },
+    {
+        "file":  "/slider/slide-2.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/1883876654.png",
+        "index":  2
+    },
+    {
+        "file":  "/slider/slide-3.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/1315186538.png",
+        "index":  3
+    },
+    {
+        "file":  "/slider/slide-4.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/1783363164.png",
+        "index":  4
+    },
+    {
+        "file":  "/slider/slide-5.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/386570211.png",
+        "index":  5
+    },
+    {
+        "file":  "/slider/slide-6.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/625168137.png",
+        "index":  6
+    },
+    {
+        "file":  "/slider/slide-7.png",
+        "source":  "https://www.protedglobal.com/uploads/images/slider/539891339.png",
+        "index":  7
+    }
+]
